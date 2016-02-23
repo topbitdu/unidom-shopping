@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors     = [ 'Topbit Du' ]
   spec.email       = [ 'topbit.du@gmail.com' ]
   spec.homepage    = 'https://github.com/topbitdu/unidom-shopping'
-  spec.summary     = 'The Shopping domain model engine includes Shopping Cart and Shopping Item models.'
+  spec.summary     = 'Unidom Shopping Domain Model Engine 购物领域模型引擎'
   spec.description = 'Unidom (UNIfied Domain Object Model) is a series of domain model engines. The Shopping domain model engine includes Shopping Cart and Shopping Item models. Unidom (统一领域对象模型)是一系列的领域模型引擎。购物领域模型引擎包括购物车和购物项的模型。'
   spec.license     = 'MIT'
 
