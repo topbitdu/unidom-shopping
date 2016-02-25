@@ -6,7 +6,7 @@ require 'unidom/shopping/version'
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = 'unidom-shopping'
-  spec.version     = ::Unidom::Shopping::VERSION
+  spec.version     = Unidom::Shopping::VERSION
   spec.authors     = [ 'Topbit Du' ]
   spec.email       = [ 'topbit.du@gmail.com' ]
   spec.homepage    = 'https://github.com/topbitdu/unidom-shopping'

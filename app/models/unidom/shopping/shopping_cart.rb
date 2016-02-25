@@ -12,4 +12,6 @@ class Unidom::Shopping::ShoppingCart < ActiveRecord::Base
   scope :shopped_by, ->(shopper) { where shopper: shopper }
   scope :shop_is,    ->(shop)    { where shop:    shop    }
 
+  include Unidom::Common::Concerns::ModelExtension
+
 end

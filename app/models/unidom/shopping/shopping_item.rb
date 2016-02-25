@@ -15,4 +15,6 @@ class Unidom::Shopping::ShoppingItem < ActiveRecord::Base
   scope :shopped_by,       ->(shopper)       { where shopper: shopper }
   scope :shopped_is,       ->(shopped)       { where shopped: shopped }
 
+  include Unidom::Common::Concerns::ModelExtension
+
 end
