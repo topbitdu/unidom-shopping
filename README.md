@@ -19,6 +19,7 @@ gem 'unidom-shopping'
 ```shell
 rake db:migrate
 ```
+The migration versions start with 200205.
 
 ## Call the Model
 ```ruby
