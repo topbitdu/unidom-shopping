@@ -4,6 +4,8 @@ class Unidom::Shopping::ShoppingItem < ActiveRecord::Base
 
   self.table_name = 'unidom_shopping_items'
 
+  include Unidom::Common::Concerns::ModelExtension
+
   validates :unit_price, presence: true, numericality: { greater_than: 0, less_than: 1000000000 }
   validates :quantity,   presence: true, numericality: { greater_than: 0, less_than: 1000000000 }
 
@@ -14,7 +16,5 @@ class Unidom::Shopping::ShoppingItem < ActiveRecord::Base
   scope :shopping_cart_is, ->(shopping_cart) { where shopping_cart_id: (shopping_cart.respond_to?(:id) ? shopping_cart.id : shopping_cart) }
   scope :shopped_by,       ->(shopper)       { where shopper: shopper }
   scope :shopped_is,       ->(shopped)       { where shopped: shopped }
-
-  include Unidom::Common::Concerns::ModelExtension
 
 end
