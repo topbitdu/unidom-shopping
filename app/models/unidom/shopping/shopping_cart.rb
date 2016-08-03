@@ -14,13 +14,13 @@ class Unidom::Shopping::ShoppingCart < ActiveRecord::Base
   scope :shopped_by, ->(shopper) { where shopper: shopper }
   scope :shop_is,    ->(shop)    { where shop:    shop    }
 
-  def add!(shopped, unit_price, quantity = 1, opened_at = Time.now)
+  def add!(shopped, by: nil, unit_price: 0, quantity: 1, at: Time.now)
     item = items.shopped_is(shopped).valid_at.alive.first
     if item.present?
-      item.attributes = { shopper: shopper, unit_price: unit_price, quantity: quantity+item.quantity }
+      item.attributes = { shopper: by||shopper, unit_price: unit_price, quantity: quantity+item.quantity }
       item.save!
     else
-      items.create! shopped: shopped, shopper: shopper, unit_price: unit_price, quantity: quantity, opened_at: opened_at
+      items.create! shopped: shopped, shopper: by||shopper, unit_price: unit_price, quantity: quantity, opened_at: at
     end
   end
 

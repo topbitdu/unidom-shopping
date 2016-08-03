@@ -31,11 +31,11 @@ shopping_cart = Unidom::Shopping::ShoppingCart.create shopper: lady, shop: shop,
 # Add Products into Shopping Cart
 fish = Product.create name: 'Fish'
 ball = Prdduct.create name: 'Ball'
-shopping_cart.items.create shopper: lady, shopped: fish, unit_price: 39.96, quantity: 2, opened_at: Time.now
-shopping_cart.items.create shopper: lady, shopped: ball, unit_price: 19.99, quantity: 1, opened_at: Time.now
+shopping_cart.items.create! shopper: lady, shopped: fish, unit_price: 39.96, quantity: 2, opened_at: Time.now
+shopping_cart.items.create! shopper: lady, shopped: ball, unit_price: 19.99, quantity: 1, opened_at: Time.now
 # or
-shopping_cart.add! fish, 39.96, 2, Time.now
-shopping_cart.add! ball, 19.99
+shopping_cart.add! fish, unit_price: 39.96, quantity: 2, at: Time.now
+shopping_cart.add! ball, unit_price: 19.99
 
 # Find the Shopping Cart
 shopping_cart = Unidom::Shopping::ShoppingCart.shopped_by(lady).shop_is(shop).valid_at.alive.first
