@@ -15,6 +15,9 @@
 ## v1.0
 1. Improve the Shopping Cart model to support the Keyword Arguments
 
+## v1.0.1
+1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0
+
 ## v1.1
 1. As Shopped concern
 2. As Shopper concern
