@@ -19,9 +19,21 @@
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0
 
 ## v1.1
-1. As Shopped concern
-2. As Shopper concern
+1. As Cart Shopper concern
+2. As Item Shopper concern
 
 ## v1.2
-1. Improve the As Shopped concern to add the #is_added_to_cart! method
-2. Improve the As Shopper concern to add the #add_to_cart! method
+1. Improve the As Cart Shopper concern to add the #get_cart! method
+2. Improve the As Item Shopper concern to add the #add! method
+
+## v1.3
+1. Improve the As Cart Shopper concern to add the #get_cart? method
+2. Improve the As Item Shopper concern to add the #add? method
+
+## v1.4
+1. As Shopped concern
+2. As Shop concern
+
+## v1.5
+1. Improve the As Shopped concern to add the #is_added! method
+2. Improve the As Shop concern to add the #get_cart! method

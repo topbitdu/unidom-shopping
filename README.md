@@ -41,3 +41,19 @@ shopping_cart.add! ball, unit_price: 19.99
 shopping_cart = Unidom::Shopping::ShoppingCart.shopped_by(lady).shop_is(shop).valid_at.alive.first
 shopping_cart.items.valid_at.alive # fish & ball
 ```
+
+
+
+## Include the Concerns
+```ruby
+include Unidom::Shopping::Concerns::AsCartShopper
+include Unidom::Shopping::Concerns::AsItemShopper
+```
+
+### As Cart Shopper
+The As Cart Shopper concern do the following tasks for the includer automatically:  
+1. Define the has_many :shopping_carts macro as: ``has_many :shopping_carts, class_name: 'Unidom::Shopping::ShoppingCart', as: :shopper``
+
+### As Item Shopper
+The As Item Shopper concern do the following tasks for the includer automatically:  
+1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopper``
