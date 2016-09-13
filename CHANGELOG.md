@@ -21,3 +21,7 @@
 ## v1.1
 1. As Cart Shopper concern
 2. As Item Shopper concern
+
+## v1.2
+1. Improve the As Cart Shopper concern to add the #get_cart! method
+2. Improve the As Item Shopper concern to add the #add! method
