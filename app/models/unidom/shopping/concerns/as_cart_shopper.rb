@@ -10,9 +10,9 @@ module Unidom::Shopping::Concerns::AsCartShopper
       shopping_carts.shop_is(from).valid_at(now: at).alive.first_or_create! opened_at: at
     end
 
-    #def get_cart?(from: nil, at: Time.now)
-    #  shopping_carts.shop_is(from).valid_at(now: at).alive.exists?
-    #end
+    def get_cart?(from: nil, at: Time.now)
+      shopping_carts.shop_is(from).valid_at(now: at).alive.exists?
+    end
 
   end
 
