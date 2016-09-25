@@ -18,9 +18,9 @@ module Unidom::Shopping::Concerns::AsItemShopper
       item
     end
 
-    #def add?(it, into: nil, at: Time.now)
-    #  shopping_items.shopping_cart_is(into).shopped_is(it).valid_at(now: at).alive.exists?
-    #end
+    def add?(it, into: nil, at: Time.now)
+      shopping_items.shopping_cart_is(into).shopped_is(it).valid_at(now: at).alive.exists?
+    end
 
   end
 
