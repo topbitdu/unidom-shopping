@@ -69,15 +69,15 @@ include Unidom::Shopping::Concerns::AsShopped
 ### As Cart Shopper
 
 The As Cart Shopper concern do the following tasks for the includer automatically:  
-1. Define the has_many :shopping_carts macro as: ``has_many :shopping_carts, class_name: 'Unidom::Shopping::ShoppingCart', as: :shopper``
-2. Define the #get_cart! method as: ``get_cart!(from: nil, at: Time.now)``
+1. Define the has_many :shopping_carts macro as: ``has_many :shopping_carts, class_name: 'Unidom::Shopping::ShoppingCart', as: :shopper``  
+2. Define the #get_cart! method as: ``get_cart!(from: nil, at: Time.now)``  
 3. Define the #get_cart? method as: ``get_cart?(from: nil, at: Time.now)``
 
 ### As Item Shopper
 
 The As Item Shopper concern do the following tasks for the includer automatically:  
-1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopper``
-2. Define the #add! method as: ``add!(it, into: nil, at: Time.now, unit_price: 0, quantity: 1)``
+1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopper``  
+2. Define the #add! method as: ``add!(it, into: nil, at: Time.now, unit_price: 0, quantity: 1)``  
 3. Define the #add? method as: ``add?(it, into: nil, at: Time.now)``
 
 ### As Shop
