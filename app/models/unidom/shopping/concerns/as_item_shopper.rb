@@ -11,7 +11,7 @@ module Unidom::Shopping::Concerns::AsItemShopper
       item  = query.first
       if item.present?
         item.unit_price = unit_price
-        item.increment! quantity: quantity
+        item.increment! :quantity, quantity
       else
         item = shopping_items.create! shopping_cart: into, shopped: it, unit_price: unit_price, quantity: quantity, opened_at: at
       end
