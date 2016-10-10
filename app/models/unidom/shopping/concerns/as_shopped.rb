@@ -19,12 +19,12 @@ module Unidom::Shopping::Concerns::AsShopped
       item
     end
 
-    #def is_added?(into: nil, by: nil, at: Time.now)
-    #  query = shopping_items.shopping_cart_is(into)
-    #  query = query.shopped_by(by) if by.present?
-    #  query = query.valid_at(now: at).alive
-    #  query.exists?
-    #end
+    def is_added?(into: nil, by: nil, at: Time.now)
+      query = shopping_items.shopping_cart_is(into)
+      query = query.shopped_by(by) if by.present?
+      query = query.valid_at(now: at).alive
+      query.exists?
+    end
 
   end
 
