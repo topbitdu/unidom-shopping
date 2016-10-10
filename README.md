@@ -83,9 +83,11 @@ The As Item Shopper concern do the following tasks for the includer automaticall
 ### As Shop
 
 The As Shop concern do the following tasks for the includer automatically:  
-1. Define the has_many :shopping_carts macro as: ``has_many :shopping_carts, class_name: 'Unidom::Shopping::ShoppingCart', as: :shop``
+1. Define the has_many :shopping_carts macro as: ``has_many :shopping_carts, class_name: 'Unidom::Shopping::ShoppingCart', as: :shop``  
+2. Define the #get_cart! method as: ``get_cart!(by: nil, at: Time.now)``
 
 ### As Shopped
 
 The As Shopped concern do the following tasks for the includer automatically:  
-1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopped``
+1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopped``  
+2. Define the #is_added! method as: ``is_added!(into: nil, by: nil, at: Time.now, unit_price: 0, quantity: 1)``
