@@ -90,4 +90,5 @@ The As Shop concern do the following tasks for the includer automatically:
 
 The As Shopped concern do the following tasks for the includer automatically:  
 1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopped``  
-2. Define the #is_added! method as: ``is_added!(into: nil, by: nil, at: Time.now, unit_price: 0, quantity: 1)``
+2. Define the #is_added! method as: ``is_added!(into: nil, by: nil, at: Time.now, unit_price: 0, quantity: 1)``  
+3. Define the #is_added? method as: ``is_added?(into: nil, by: nil, at: Time.now)``
