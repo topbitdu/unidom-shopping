@@ -1,6 +1,6 @@
 # Shopping Cart 是购物车。
 
-class Unidom::Shopping::ShoppingCart < ActiveRecord::Base
+class Unidom::Shopping::ShoppingCart < Unidom::Shopping::ApplicationRecord
 
   self.table_name = 'unidom_shopping_carts'
 
