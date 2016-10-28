@@ -1,6 +1,6 @@
 # Shopping Item 是购物项。
 
-class Unidom::Shopping::ShoppingItem < ActiveRecord::Base
+class Unidom::Shopping::ShoppingItem < Unidom::Shopping::ApplicationRecord
 
   self.table_name = 'unidom_shopping_items'
 
