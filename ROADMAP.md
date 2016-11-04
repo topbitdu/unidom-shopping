@@ -41,3 +41,6 @@
 
 ## v1.6
 1. Improve the As Shopped concern to add the #is_added? method
+
+## v1.6.1
+1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.6
