@@ -1,7 +1,7 @@
 # Unidom Shopping Change Log 购物领域模型引擎变更日志
 
 ## v0.1
-1. Shopping Cart model & migration
+1. Shopping Cart model & migration (20020501000000)
 2. Shopping Item model & migration
 
 ## v0.2
