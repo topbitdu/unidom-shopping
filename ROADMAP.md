@@ -2,7 +2,7 @@
 
 ## v0.1
 1. Shopping Cart model & migration (20020501000000)
-2. Shopping Item model & migration
+2. Shopping Item model & migration (20020502000000)
 
 ## v0.2
 1. Improved the Shopping Cart model to include the Model Extension concern
