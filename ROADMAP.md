@@ -9,7 +9,7 @@
 2. Improved the Shopping Item model to include the Model Extension concern
 
 ## v0.3
-1. Improve the Shopping Cart model to add the #add! method
+1. Improve the Shopping Cart model to add the #``add!`` method
 2. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
 ## v1.0
