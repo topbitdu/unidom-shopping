@@ -27,7 +27,7 @@
 2. Improved the As Item Shopper concern to add the #``add!`` method
 
 ## v1.3
-1. Improved the As Cart Shopper concern to add the #get_cart? method
+1. Improved the As Cart Shopper concern to add the #``get_cart?`` method
 2. Improved the As Item Shopper concern to add the #add? method
 
 ## v1.4
