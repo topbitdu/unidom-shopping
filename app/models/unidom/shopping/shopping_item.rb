@@ -1,3 +1,4 @@
+##
 # Shopping Item 是购物项。
 
 class Unidom::Shopping::ShoppingItem < Unidom::Shopping::ApplicationRecord
