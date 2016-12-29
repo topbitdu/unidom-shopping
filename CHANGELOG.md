@@ -37,7 +37,7 @@
 ## v1.5
 1. Improved the As Shopped concern to add the #``is_added!`` method
 2. Improved the As Shop concern to add the #``get_cart!`` method
-3. Improve the As Item Shopper concern for the #``add!`` method
+3. Improved the As Item Shopper concern for the #``add!`` method
 
 ## v1.6
 1. Improve the As Shopped concern to add the #``is_added?`` method
