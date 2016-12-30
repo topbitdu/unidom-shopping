@@ -50,3 +50,7 @@
 
 ## v1.6.3
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
+
+## v1.6.4
+1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.8
+2. Improve the Engine class to include the Engine Extension
