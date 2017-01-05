@@ -1,3 +1,4 @@
+##
 # Shopping Cart 是购物车。
 
 class Unidom::Shopping::ShoppingCart < Unidom::Shopping::ApplicationRecord
