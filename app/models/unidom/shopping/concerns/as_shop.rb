@@ -1,3 +1,6 @@
+##
+# As Shop 是购物场所的领域逻辑关注点。
+
 module Unidom::Shopping::Concerns::AsShop
 
   extend ActiveSupport::Concern
