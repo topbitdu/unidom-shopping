@@ -1,3 +1,6 @@
+##
+# As Shopped 是被购买的商品的领域逻辑关注点。
+
 module Unidom::Shopping::Concerns::AsShopped
 
   extend ActiveSupport::Concern
