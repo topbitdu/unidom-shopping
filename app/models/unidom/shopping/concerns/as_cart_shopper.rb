@@ -1,3 +1,6 @@
+##
+# As Cart Shopper 是购物车所有者的领域逻辑关注点。
+
 module Unidom::Shopping::Concerns::AsCartShopper
 
   extend ActiveSupport::Concern
