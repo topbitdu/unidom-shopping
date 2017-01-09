@@ -1,3 +1,6 @@
+##
+# As Item Shopper 是购物项所有者的领域逻辑关注点。
+
 module Unidom::Shopping::Concerns::AsItemShopper
 
   extend ActiveSupport::Concern
