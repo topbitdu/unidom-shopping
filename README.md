@@ -1,6 +1,8 @@
 # Unidom Shopping 购物领域模型引擎
 
+[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/gems/unidom-shopping/frames)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
+
 [![Gem Version](https://badge.fury.io/rb/unidom-shopping.svg)](https://badge.fury.io/rb/unidom-shopping)
 [![Dependency Status](https://gemnasium.com/badges/github.com/topbitdu/unidom-shopping.svg)](https://gemnasium.com/github.com/topbitdu/unidom-shopping)
 
@@ -68,27 +70,27 @@ include Unidom::Shopping::Concerns::AsShopped
 
 ### As Cart Shopper
 
-The As Cart Shopper concern do the following tasks for the includer automatically:  
-1. Define the has_many :shopping_carts macro as: ``has_many :shopping_carts, class_name: 'Unidom::Shopping::ShoppingCart', as: :shopper``  
-2. Define the #get_cart! method as: ``get_cart!(from: nil, at: Time.now)``  
+The As Cart Shopper concern do the following tasks for the includer automatically:
+1. Define the has_many :shopping_carts macro as: ``has_many :shopping_carts, class_name: 'Unidom::Shopping::ShoppingCart', as: :shopper``
+2. Define the #get_cart! method as: ``get_cart!(from: nil, at: Time.now)``
 3. Define the #get_cart? method as: ``get_cart?(from: nil, at: Time.now)``
 
 ### As Item Shopper
 
-The As Item Shopper concern do the following tasks for the includer automatically:  
-1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopper``  
-2. Define the #add! method as: ``add!(it, into: nil, at: Time.now, unit_price: 0, quantity: 1)``  
+The As Item Shopper concern do the following tasks for the includer automatically:
+1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopper``
+2. Define the #add! method as: ``add!(it, into: nil, at: Time.now, unit_price: 0, quantity: 1)``
 3. Define the #add? method as: ``add?(it, into: nil, at: Time.now)``
 
 ### As Shop
 
-The As Shop concern do the following tasks for the includer automatically:  
-1. Define the has_many :shopping_carts macro as: ``has_many :shopping_carts, class_name: 'Unidom::Shopping::ShoppingCart', as: :shop``  
+The As Shop concern do the following tasks for the includer automatically:
+1. Define the has_many :shopping_carts macro as: ``has_many :shopping_carts, class_name: 'Unidom::Shopping::ShoppingCart', as: :shop``
 2. Define the #get_cart! method as: ``get_cart!(by: nil, at: Time.now)``
 
 ### As Shopped
 
-The As Shopped concern do the following tasks for the includer automatically:  
-1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopped``  
-2. Define the #is_added! method as: ``is_added!(into: nil, by: nil, at: Time.now, unit_price: 0, quantity: 1)``  
+The As Shopped concern do the following tasks for the includer automatically:
+1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopped``
+2. Define the #is_added! method as: ``is_added!(into: nil, by: nil, at: Time.now, unit_price: 0, quantity: 1)``
 3. Define the #is_added? method as: ``is_added?(into: nil, by: nil, at: Time.now)``
