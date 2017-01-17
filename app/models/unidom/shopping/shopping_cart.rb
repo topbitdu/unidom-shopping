@@ -28,4 +28,4 @@ class Unidom::Shopping::ShoppingCart < Unidom::Shopping::ApplicationRecord
     end
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shopping::ShoppingCart'
