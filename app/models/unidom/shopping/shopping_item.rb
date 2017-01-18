@@ -18,4 +18,4 @@ class Unidom::Shopping::ShoppingItem < Unidom::Shopping::ApplicationRecord
   scope :shopped_by,       ->(shopper)       { where shopper: shopper }
   scope :shopped_is,       ->(shopped)       { where shopped: shopped }
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shopping::ShoppingItem'
