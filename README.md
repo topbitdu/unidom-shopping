@@ -94,3 +94,19 @@ The As Shopped concern do the following tasks for the includer automatically:
 1. Define the has_many :shopping_items macro as: ``has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopped``
 2. Define the #is_added! method as: ``is_added!(into: nil, by: nil, at: Time.now, unit_price: 0, quantity: 1)``
 3. Define the #is_added? method as: ``is_added?(into: nil, by: nil, at: Time.now)``
+
+
+
+## Disable the Model & Migration
+
+If you only need the app components other than models, the migrations should be neglected, and the models should not be loaded.
+```ruby
+# config/initializers/unidom.rb
+Unidom::Common.configure do |options|
+
+  options[:neglected_namespaces] = %w{
+    Unidom::Shopping
+  }
+
+end
+```
