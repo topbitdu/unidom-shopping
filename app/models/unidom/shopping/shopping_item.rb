@@ -7,8 +7,8 @@ class Unidom::Shopping::ShoppingItem < Unidom::Shopping::ApplicationRecord
 
   include Unidom::Common::Concerns::ModelExtension
 
-  validates :unit_price, presence: true, numericality: { greater_than: 0, less_than: 1000000000 }
-  validates :quantity,   presence: true, numericality: { greater_than: 0, less_than: 1000000000 }
+  validates :unit_price, presence: true, numericality: { greater_than: 0, less_than: 1_000_000_000 }
+  validates :quantity,   presence: true, numericality: { greater_than: 0, less_than: 1_000_000_000 }
 
   belongs_to :shopping_cart, class_name: 'Unidom::Shopping::ShoppingCart'
   belongs_to :shopper,       polymorphic: true
