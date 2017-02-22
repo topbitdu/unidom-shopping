@@ -6,7 +6,7 @@
 
 ## v0.2
 1. Improve the Shopping Cart model to include the Model Extension concern
-2. Improved the Shopping Item model to include the Model Extension concern
+2. Improve the Shopping Item model to include the Model Extension concern
 
 ## v0.3
 1. Improve the Shopping Cart model to add the #``add!`` method
