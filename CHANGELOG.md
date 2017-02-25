@@ -65,4 +65,4 @@
 3. Validators RSpec examples manifest
 
 ## v1.7.1
-1. Improved the Shopping Item spec for the validations on the #``unit_price`` attribute, & the #quantity attribute
+1. Improved the Shopping Item spec for the validations on the #``unit_price`` attribute, & the #``quantity`` attribute
