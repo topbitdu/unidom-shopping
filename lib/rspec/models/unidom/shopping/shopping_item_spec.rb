@@ -64,6 +64,15 @@ describe Unidom::Shopping::ShoppingItem, type: :model do
       { quantity: '1_000_000_000.01' } => 1,
       { quantity: 1_000_000_000.01   } => 1
 
+    shopping_cart_attributes = {
+      shopper_id:   SecureRandom.uuid,
+      shopper_type: 'Unidom::Shopping::Shopper',
+      shop_id:      SecureRandom.uuid,
+      shop_type:    'Unidom::Shopping::Shop'
+    }
+
+    it_behaves_like 'belongs_to', model_attributes, :shopping_cart, Unidom::Shopping::ShoppingCart, shopping_cart_attributes
+
   end
 
 end
