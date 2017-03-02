@@ -66,3 +66,7 @@
 
 ## v1.7.1
 1. Improved the Shopping Item spec for the validations on the #``unit_price`` attribute, & the #``quantity`` attribute
+
+## v1.7.2
+1. Improve the Shopping Cart spec for the ``has_many :items, class_name: 'Unidom::Shopping::ShoppingItem'`` macro
+2. Improve the Shopping Item spec for the ``belongs_to :shopping_cart, class_name: 'Unidom::Shopping::ShoppingCart'`` macro
