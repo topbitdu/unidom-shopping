@@ -73,6 +73,8 @@ describe Unidom::Shopping::ShoppingItem, type: :model do
 
     it_behaves_like 'belongs_to', model_attributes, :shopping_cart, Unidom::Shopping::ShoppingCart, shopping_cart_attributes
 
+    it_behaves_like 'monomorphic scope', model_attributes, :shopping_cart_is, :shopping_cart
+
   end
 
 end
