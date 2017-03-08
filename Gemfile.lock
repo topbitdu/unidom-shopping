@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unidom-shopping (1.7.2)
+    unidom-shopping (1.7.3)
       unidom-common (~> 1.9)
 
 GEM
