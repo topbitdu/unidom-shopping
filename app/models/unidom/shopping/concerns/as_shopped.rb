@@ -9,6 +9,9 @@ module Unidom::Shopping::Concerns::AsShopped
 
     has_many :shopping_items, class_name: 'Unidom::Shopping::ShoppingItem', as: :shopped
 
+    ##
+    # 将当前商品放入购物车 into ，购物者是 by 。购物时间是 at ，缺省为当前时间。单价是 unit_price ，缺省为 0 。数量是 quantity ，缺省为 1 。如：
+    # coca_cola.is_added! into: shopping_cart, by: current_person, unit_price: 3.50, quantity: 2
     def is_added!(into: nil, by: nil, at: Time.now, unit_price: 0, quantity: 1)
       query = shopping_items.shopping_cart_is(into).valid_at(now: at).alive
       item  = query.first
