@@ -77,3 +77,7 @@
 ## v1.7.4
 1. Improve the Shopping Item model for the validations on the #``unit_price`` attribute, & the #``quantity`` attribute
 2. Improve the Shopping Item spec for the validations on the #``unit_price`` attribute, & the #``quantity`` attribute
+
+## v1.7.5
+1. As Shop shared examples
+2. RSpec shared examples manifest
