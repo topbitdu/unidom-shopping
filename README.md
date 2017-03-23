@@ -115,6 +115,8 @@ end
 
 ## RSpec examples
 
+### RSpec example manifest (run automatically)
+
 ```ruby
 # spec/models/unidom_spec.rb
 require 'unidom/shopping/models_rspec'
@@ -124,4 +126,35 @@ require 'unidom/shopping/types_rspec'
 
 # spec/validators/unidom_spec.rb
 require 'unidom/shopping/validators_rspec'
+```
+
+### RSpec shared examples (to be integrated)
+
+```ruby
+# lib/unidom.rb
+def initialize_unidom
+
+  Unidom::Party::Shop.class_eval do
+    include Unidom::Shopping::Concerns::AsShop
+  end
+
+end
+
+# spec/rails_helper.rb
+require 'unidom'
+initialize_unidom
+
+# spec/support/unidom_rspec_shared_examples.rb
+require 'unidom/shopping/rspec_shared_examples'
+
+# spec/models/unidom/party/shop_spec.rb
+describe Unidom::Party::Shop do
+
+  model_attribtues = {
+    name: 'WalMart'
+  }
+
+  it_behaves_like 'Unidom::Shopping::Concerns::AsShop', model_attribtues
+
+end
 ```
