@@ -14,8 +14,8 @@ class Unidom::Shopping::ShoppingItem < Unidom::Shopping::ApplicationRecord
   belongs_to :shopper,       polymorphic: true
   belongs_to :shopped,       polymorphic: true
 
-  scope :shopping_cart_is, ->(shopping_cart) { where shopping_cart_id: to_id(shopping_cart) }
-  scope :shopped_by,       ->(shopper)       { where shopper:          shopper              }
-  scope :shopped_is,       ->(shopped)       { where shopped:          shopped              }
+  scope :shopping_cart_is, ->(shopping_cart) { where shopping_cart: shopping_cart }
+  scope :shopped_by,       ->(shopper)       { where shopper:       shopper       }
+  scope :shopped_is,       ->(shopped)       { where shopped:       shopped       }
 
 end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Shopping::ShoppingItem'
