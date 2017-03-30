@@ -11,9 +11,9 @@ describe Unidom::Shopping::ShoppingItem, type: :model do
     model_attributes = {
       shopping_cart_id: SecureRandom.uuid,
       shopper_id:       SecureRandom.uuid,
-      shopper_type:     'Unidom::Shopping::Shopper',
+      shopper_type:     'Unidom::Shopping::Shopper::Mock',
       shopped_id:       SecureRandom.uuid,
-      shopped_type:     'Unidom::Shopping::Shopped',
+      shopped_type:     'Unidom::Shopping::Shopped::Mock',
       unit_price:       12.00,
       quantity:         5.00
     }
