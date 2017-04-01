@@ -81,3 +81,6 @@
 ## v1.7.5
 1. As Shop shared examples
 2. RSpec shared examples manifest
+
+## v1.7.6
+1. As Shopped shared examples

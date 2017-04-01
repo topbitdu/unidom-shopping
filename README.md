@@ -138,6 +138,10 @@ def initialize_unidom
     include Unidom::Shopping::Concerns::AsShop
   end
 
+  Unidom::Product::Product.class_eval do
+    include Unidom::Shopping::Concerns::AsShopped
+  end
+
 end
 
 # spec/rails_helper.rb
@@ -148,13 +152,35 @@ initialize_unidom
 require 'unidom/shopping/rspec_shared_examples'
 
 # spec/models/unidom/party/shop_spec.rb
-describe Unidom::Party::Shop do
+describe Unidom::Party::Shop, type: :model do
 
-  model_attribtues = {
-    name: 'WalMart'
-  }
+  context do
 
-  it_behaves_like 'Unidom::Shopping::Concerns::AsShop', model_attribtues
+    model_attribtues = {
+      name: 'WalMart'
+    }
+
+    it_behaves_like 'Unidom::Shopping::Concerns::AsShop', model_attribtues
+
+  end
+
+end
+
+# spec/models/unidom/product/product_spec.rb
+describe Unidom::Product::Product, type: :model do
+
+  context do
+
+    model_attribtues = {
+      name:             'Model X',
+      abbreviation:     'MX',
+      measurement_unit: 'set',
+      packing_norm:     '1 per 1'
+    }
+
+    it_behaves_like 'Unidom::Shopping::Concerns::AsShopped', model_attribtues
+
+  end
 
 end
 ```
