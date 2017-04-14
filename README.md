@@ -134,6 +134,10 @@ require 'unidom/shopping/validators_rspec'
 # lib/unidom.rb
 def initialize_unidom
 
+  Unidom::Party::Person.class_eval do
+    include Unidom::Shopping::Concerns::AsCartShopper
+  end
+
   Unidom::Party::Shop.class_eval do
     include Unidom::Shopping::Concerns::AsShop
   end
@@ -150,6 +154,21 @@ initialize_unidom
 
 # spec/support/unidom_rspec_shared_examples.rb
 require 'unidom/shopping/rspec_shared_examples'
+
+# spec/models/unidom/party/person_spec.rb
+describe Unidom::Party::Person, type: :model do
+
+  context do
+
+    model_attribtues = {
+      name: 'Tim'
+    }
+
+    it_behaves_like 'Unidom::Shopping::Concerns::AsCartShopper', model_attribtues
+
+  end
+
+end
 
 # spec/models/unidom/party/shop_spec.rb
 describe Unidom::Party::Shop, type: :model do
