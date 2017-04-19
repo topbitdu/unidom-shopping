@@ -19,6 +19,9 @@ class Unidom::Shopping::ShoppingCart < Unidom::Shopping::ApplicationRecord
   # 将商品 shopped 放入购物车。购物者为 by 。单价为 unit_price ，缺省值为 0 。数量为 quantity ，缺省值是 1 。时间为 at ，缺省为当前时间。如：
   # shopping_cart.add! coca_cola, by: current_person, unit_price: 3.50, quantity: 2
   def add!(shopped, by: nil, unit_price: 0, quantity: 1, at: Time.now)
+
+    assert_present! :shopped, shopped
+
     item = items.shopped_is(shopped).valid_at.alive.first
     if item.present?
       item.attributes = { shopper: by||shopper, unit_price: unit_price, quantity: quantity+item.quantity }
