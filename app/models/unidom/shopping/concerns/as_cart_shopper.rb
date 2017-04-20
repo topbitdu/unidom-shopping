@@ -3,7 +3,8 @@
 
 module Unidom::Shopping::Concerns::AsCartShopper
 
-  extend ActiveSupport::Concern
+  extend  ActiveSupport::Concern
+  include Unidom::Common::Concerns::ArgumentValidation
 
   included do |includer|
 
@@ -13,7 +14,11 @@ module Unidom::Shopping::Concerns::AsCartShopper
     # 以购物者的身份，从指定的商店 from 获取购物车。时间为 at ，缺省为当前时间。如：
     # current_person.get_cart! from: shop
     def get_cart!(from: nil, at: Time.now)
+
+      assert_present! :from, from
+
       shopping_carts.shop_is(from).valid_at(now: at).alive.first_or_create! opened_at: at
+
     end
 
     def get_cart?(from: nil, at: Time.now)
