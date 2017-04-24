@@ -136,6 +136,7 @@ def initialize_unidom
 
   Unidom::Party::Person.class_eval do
     include Unidom::Shopping::Concerns::AsCartShopper
+    include Unidom::Shopping::Concerns::AsItemShopper
   end
 
   Unidom::Party::Shop.class_eval do
@@ -165,6 +166,7 @@ describe Unidom::Party::Person, type: :model do
     }
 
     it_behaves_like 'Unidom::Shopping::Concerns::AsCartShopper', model_attribtues
+    it_behaves_like 'Unidom::Shopping::Concerns::AsItemShopper', model_attribtues
 
   end
 

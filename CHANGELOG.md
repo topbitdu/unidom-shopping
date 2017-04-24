@@ -88,3 +88,7 @@
 ## v1.7.7
 1. As Cart Shopper shared examples
 2. Improve the RSpec shared examples manifest to require the As Cart Shopper shared examples
+
+## v1.7.8
+1. As Item Shopper shared examples
+2. Improve the RSpec shared examples manifest to require the As Item Shopper shared examples
