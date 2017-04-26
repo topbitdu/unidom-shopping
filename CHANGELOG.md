@@ -72,7 +72,7 @@
 2. Improved the Shopping Item spec for the ``belongs_to :shopping_cart, class_name: 'Unidom::Shopping::ShoppingCart'`` macro
 
 ## v1.7.3
-1. Improve the Shopping Item spec for the ``shopping_cart_is`` scope
+1. Improved the Shopping Item spec for the ``shopping_cart_is`` scope
 
 ## v1.7.4
 1. Improve the Shopping Item model for the validations on the #``unit_price`` attribute, & the #``quantity`` attribute
