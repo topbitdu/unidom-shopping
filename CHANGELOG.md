@@ -75,7 +75,7 @@
 1. Improved the Shopping Item spec for the ``shopping_cart_is`` scope
 
 ## v1.7.4
-1. Improve the Shopping Item model for the validations on the #``unit_price`` attribute, & the #``quantity`` attribute
+1. Improved the Shopping Item model for the validations on the #``unit_price`` attribute, & the #``quantity`` attribute
 2. Improve the Shopping Item spec for the validations on the #``unit_price`` attribute, & the #``quantity`` attribute
 
 ## v1.7.5
