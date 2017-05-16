@@ -92,3 +92,9 @@
 ## v1.7.8
 1. As Item Shopper shared examples
 2. Improve the RSpec shared examples manifest to require the As Item Shopper shared examples
+
+## v1.7.9
+1. Improve the Ruby Gem Specification to depend on unidom-common v1.10
+2. Improve the Shopping Cart migration & the Shopping Item migration for the #opened_at column, & the #closed_at column
+3. Improve the Shopping Item model for the validations on the #unit_price attribute, & the #quantity attribute
+4. Improve the Shopping Item spec for the validations on the #unit_price attribute, & the #quantity attribute
